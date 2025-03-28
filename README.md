@@ -19,8 +19,8 @@ Then download the challenge to your computer and install dependencies by running
 > ⚠️ IMPORTANT: Please make sure to run the below commands through WSL only. In PowerShell, you'll get an error because some files are not supported on Windows.
 
 ```sh
-git clone https://github.com/abhi152003/speedrun-rust
-cd speedrun-rust
+git clone https://github.com/abhi152003/speedrun_stylus
+cd speedrun_stylus
 git checkout nft
 yarn install
 ```
@@ -30,7 +30,7 @@ yarn install
 Contracts will be deployed through the cargo stylus command using the pre-funded account's private key so users can perform any transaction through the frontend while interacting with the contract.
 
 ```sh
-cd speedrun-rust # if not done
+cd speedrun_stylus # if not done
 cd packages
 cd cargo-stylus
 cd nft
@@ -74,7 +74,7 @@ Shell scripts created in Windows often have `CRLF` line endings, which cause iss
 > Then in a second WSL terminal window, you can run below commands to start your 📱 frontend:
 
 ```sh
-cd speedrun-rust ( if not done )
+cd speedrun_stylus ( if not done )
 cd packages ( if not done )
 cd nextjs
 yarn run dev OR yarn dev
@@ -116,9 +116,9 @@ Below are the examples of above all interactions that can be done with the NFT s
 ![image](https://github.com/user-attachments/assets/950a27bb-ee5a-43f4-9c13-a9e4f0b48b30)
 
 
-💼 Take a quick look at your deploy script `run-dev-node.sh` in `speedrun-rust/packages/cargo-stylus/nft/run-dev-node.sh`.
+💼 Take a quick look at your deploy script `run-dev-node.sh` in `speedrun_stylus/packages/cargo-stylus/nft/run-dev-node.sh`.
 
-📝 If you want to edit the frontend, navigate to `speedrun-rust/packages/nextjs/app` and open the specific page you want to modify. For instance: `/debug/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
+📝 If you want to edit the frontend, navigate to `speedrun_stylus/packages/nextjs/app` and open the specific page you want to modify. For instance: `/debug/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
 
 ---
 
@@ -130,7 +130,7 @@ Below are the examples of above all interactions that can be done with the NFT s
 
 ![image](https://github.com/user-attachments/assets/d84c4d6a-be20-426b-9c68-2c021caefb29)
 
-The above command will automatically deploy the contract functions written inside `speedrun-rust/packages/cargo-stylus/nft/src/lib.rs`
+The above command will automatically deploy the contract functions written inside `speedrun_stylus/packages/cargo-stylus/nft/src/lib.rs`
 
 > This local account will deploy your contracts, allowing you to avoid entering a personal private key because the deployment happens using the pre-funded account's private key.
 
@@ -179,4 +179,4 @@ cargo stylus deploy -e http://127.0.0.1:8547 --private-key "$your_private_key"
 
 Explore more challenges or contribute to this project!
 
-> 🏃 Head to your next challenge [here](https://github.com/abhi152003/speedrun-rust).
+> 🏃 Head to your next challenge [here](https://github.com/abhi152003/speedrun_stylus).
