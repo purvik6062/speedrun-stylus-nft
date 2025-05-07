@@ -143,20 +143,12 @@ The above command will automatically deploy the contract functions written insid
 🚀 Deploy your NextJS App
 
 ```shell
-yarn vercel
+vercel
 ```
 
 > Follow the steps to deploy to Vercel. Once you log in (email, github, etc), the default options should work. It'll give you a public URL.
 
 > If you want to redeploy to the same production URL you can run `yarn vercel --prod`. If you omit the `--prod` flag it will deploy it to a preview/test URL.
-
-⚠️ Run the automated testing function to make sure your app passes
-
-```shell
-yarn test
-```
-
----
 
 ## Checkpoint 4: 📜 Contract Verification
 
