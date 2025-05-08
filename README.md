@@ -1,5 +1,7 @@
 # 🚩 Challenge #1: 🎟 Simple NFT Example
 
+> ⚠️ **Important:** Please complete **Challenge #0** first if you haven't already, as it contains essential instructions related to dependencies needed for all upcoming challenges.
+
 🎫 Create a simple NFT project:
 
 👷‍♀️ In this project, you'll build and deploy smart contracts to create, manage, and interact with NFTs. Use a React-based frontend to enable users to mint NFTs, assign them to specific addresses, check token ownership, and burn tokens directly. 🚀
@@ -19,9 +21,8 @@ Then download the challenge to your computer and install dependencies by running
 > ⚠️ IMPORTANT: Please make sure to run the below commands through WSL only. In PowerShell, you'll get an error because some files are not supported on Windows.
 
 ```sh
-git clone https://github.com/abhi152003/speedrun_stylus
+git clone -b nft https://github.com/abhi152003/speedrun_stylus
 cd speedrun_stylus
-git checkout nft
 yarn install
 ```
 
