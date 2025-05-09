@@ -1,1 +1,1 @@
-/root/speedrun_stylus/packages/cargo-stylus/nft/target/x86_64-unknown-linux-gnu/debug/libstylus_workshop_rust_nft.rlib: /root/speedrun_stylus/packages/cargo-stylus/nft/src/erc721.rs /root/speedrun_stylus/packages/cargo-stylus/nft/src/lib.rs
+/root/speedrun-stylus-nft/packages/cargo-stylus/nft/target/x86_64-unknown-linux-gnu/debug/libstylus_workshop_rust_nft.rlib: /root/speedrun-stylus-nft/packages/cargo-stylus/nft/src/erc721.rs /root/speedrun-stylus-nft/packages/cargo-stylus/nft/src/lib.rs
