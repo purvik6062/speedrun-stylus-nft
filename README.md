@@ -172,4 +172,4 @@ cargo stylus deploy -e http://127.0.0.1:8547 --private-key "$your_private_key"
 
 Explore more challenges or contribute to this project!
 
-> 🏃 Head to your next challenge [here](https://github.com/abhi152003/speedrun_stylus).
+> 🏃 Head to your next challenge [here](https://speedrun-stylus.vercel.app/challenge/vending-machine).
