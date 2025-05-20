@@ -37,8 +37,13 @@ cd cargo-stylus
 cd nft
 ```
 
-> Now open your Docker desktop and then return to your IDE and run bash run-dev-node.sh. This will spin up the nitro devnode in Docker. You can check it out in your Docker desktop. This will take some time to deploy the RUST contract, and then the script will automatically generate the ABI. You can view all these transactions in your terminal and Docker desktop. The Docker node is running at localhost:8547,
-but before running this command make sure about below thing
+> Now open your Docker desktop and then return to your IDE and run the command below to spin up the nitro devnode in Docker. This will deploy the contract and generate the ABI so you can interact with the contracts written in RUST:
+
+```bash
+bash run-dev-node.sh
+```
+
+This command will spin up the nitro devnode in Docker. You can check it out in your Docker desktop. This will take some time to deploy the RUST contract, and then the script will automatically generate the ABI. You can view all these transactions in your terminal and Docker desktop. The Docker node is running at localhost:8547.
 
 ## 🚨 Fixing Line Endings and Running Shell Scripts in WSL on a CRLF-Based Windows System
 
@@ -172,4 +177,4 @@ cargo stylus deploy -e http://127.0.0.1:8547 --private-key "$your_private_key"
 
 Explore more challenges or contribute to this project!
 
-> 🏃 Head to your next challenge [here](https://speedrun-stylus.vercel.app/challenge/vending-machine).
+> 🏃 Head to your next challenge [here](https://speedrunstylus.com/challenge/vending-machine).
