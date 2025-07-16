@@ -168,8 +168,46 @@ cargo stylus deploy -e http://127.0.0.1:8547 --private-key "$your_private_key"
 # here you can use pre-funded account's private-key as well
 ```
 
-> It is okay if it says your contract is already verified. 
+> It is okay if it says your contract is already verified.
 
+---
+
+## 🚀 Deploying to Arbitrum Sepolia
+
+If you want to deploy your NFT contract to the Arbitrum Sepolia testnet, follow these steps:
+
+1. **Run the Sepolia Deployment Script**
+
+   Open your terminal and run:
+   ```bash
+   cd packages/cargo-stylus/nft
+   bash run-sepolia-deploy.sh
+   ```
+   This will deploy your NFT contract to Arbitrum Sepolia and output the contract address and transaction hash.
+
+2. **Configure the Frontend for Sepolia**
+
+   - Go to the `packages/nextjs` directory:
+     ```bash
+     cd packages/nextjs
+     ```
+   - Copy the example environment file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Open the `.env` file and set the following variables:
+     ```env
+     NEXT_PUBLIC_RPC_URL=https://sepolia-rollup.arbitrum.io/rpc
+     NEXT_PUBLIC_PRIVATE_KEY=0xyour_private_key_of_your_ethereum_wallet
+     ```
+     Replace `your_private_key_of_your_ethereum_wallet` with your actual Ethereum wallet private key (never share this key publicly).
+
+3. **Start the Frontend**
+
+   ```bash
+   yarn run dev
+   ```
+   Your frontend will now connect to the Arbitrum Sepolia network and interact with your deployed NFT contract.
 
 ---
 

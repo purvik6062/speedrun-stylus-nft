@@ -10,7 +10,7 @@ use stylus_sdk::{
     contract,
     msg,
     prelude::*,
-    alloy_primitives::{Address, uint, U256}
+    alloy_primitives::{Address, U256}
 };
 use alloy_sol_types::sol;
 use crate::erc721::{Erc721, Erc721Params};

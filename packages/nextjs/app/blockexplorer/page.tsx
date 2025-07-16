@@ -9,22 +9,22 @@ import { useFetchBlocks } from "~~/hooks/scaffold-eth";
 // Create a custom chain configuration for local Arbitrum Nitro
 const localNitro = {
   id: 412346,
-  name: 'Local Nitro',
-  network: 'nitro-local',
+  name: "Local Nitro",
+  network: "nitro-local",
   nativeCurrency: {
     decimals: 18,
-    name: 'Ethereum',
-    symbol: 'ETH',
+    name: "Ethereum",
+    symbol: "ETH",
   },
   rpcUrls: {
-    default: { http: ['http://localhost:8547'] },
-    public: { http: ['http://localhost:8547'] },
+    default: { http: ["process.env.NEXT_PUBLIC_RPC_URL"] },
+    public: { http: ["process.env.NEXT_PUBLIC_RPC_URL"] },
   },
 } as const;
 
 const publicClient = createPublicClient({
   chain: localNitro,
-  transport: http()
+  transport: http(),
 });
 
 const BlockExplorer: NextPage = () => {
@@ -40,7 +40,7 @@ const BlockExplorer: NextPage = () => {
         console.error("Failed to connect to Nitro node:", error);
       }
     };
-    
+
     checkConnection();
   }, []);
 
@@ -49,7 +49,7 @@ const BlockExplorer: NextPage = () => {
       <div className="container mx-auto my-10 p-4">
         <div className="alert alert-error">
           <p className="font-bold">Cannot connect to local Arbitrum Nitro node</p>
-          <p>Make sure your Nitro node is running at http://localhost:8547</p>
+          <p>Make sure your Nitro node is running at process.env.NEXT_PUBLIC_RPC_URL</p>
         </div>
       </div>
     );
