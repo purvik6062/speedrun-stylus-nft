@@ -178,12 +178,18 @@ If you want to deploy your NFT contract to the Arbitrum Sepolia testnet, follow 
 
 1. **Run the Sepolia Deployment Script**
 
+   Export your private key in the terminal :
+   ```bash
+   export PRIVATE_KEY=your_private_key_of_your_ethereum_wallet
+   ```
+
    Open your terminal and run:
    ```bash
    cd packages/cargo-stylus/nft
    bash run-sepolia-deploy.sh
    ```
-   This will deploy your NFT contract to Arbitrum Sepolia and output the contract address and transaction hash.
+   This will deploy your contract to Arbitrum Sepolia and output the contract address and transaction hash.
+
 
 2. **Configure the Frontend for Sepolia**
 
