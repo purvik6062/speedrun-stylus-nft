@@ -53,29 +53,34 @@ This command will spin up the nitro devnode in Docker. You can check it out in y
 
 ## 🛠️ Steps to Fix the Issue
 
-###  Convert Line Endings to LF
+### Convert Line Endings to LF
+
 Shell scripts created in Windows often have `CRLF` line endings, which cause issues in Unix-like environments such as WSL. To fix this:
 
 #### Using `dos2unix`
+
 1. Install `dos2unix` (if not already installed):
+
    ```bash
    sudo apt install dos2unix
    ```
 
 2. Convert the script's line endings:
-    ```bash
+
+   ```bash
    dos2unix run-dev-node.sh
    ```
 
 3. Make the Script Executable:
-    ```bash
-    chmod +x run-dev-node.sh
-    ```
+
+   ```bash
+   chmod +x run-dev-node.sh
+   ```
 
 4. Run the Script in WSL
-    ```bash
-    bash run-dev-node.sh
-    ```
+   ```bash
+   bash run-dev-node.sh
+   ```
 
 > Then in a second WSL terminal window, you can run below commands to start your 📱 frontend:
 
@@ -90,7 +95,33 @@ yarn run dev OR yarn dev
 
 ---
 
-## 💫 Checkpoint 1:  Frontend Magic
+## 📊 Performance Tracking
+
+Before submitting your challenge, you can run the performance tracking script to analyze your application:
+
+1. **Navigate to the performance tracking directory:**
+
+   ```bash
+   cd packages/nextjs/services/web3
+   ```
+
+2. **Update the contract address:**
+   Open the `performanceTracking.js` file and paste the contract address that was deployed on your local node. (you can get contract address same as we have mentioned above in Docker_Img)
+
+3. **Run the performance tracking script:**
+   ```bash
+   node performanceTracking.js
+   ```
+
+This will provide insights about the savings when you cache your deployed contract. The output will show performance analysis similar to the image below:
+
+![image](https://raw.githubusercontent.com/purvik6062/speedrun_stylus/refs/heads/counter/assets/performance.png)
+
+> 📝 **Important**: Make sure to note down the **Latency Improvement** and **Gas Savings** values from the output, as you'll need to include these metrics when submitting your challenge.
+
+---
+
+## 💫 Checkpoint 1: Frontend Magic
 
 > ⛽ You'll be redirected to the below page after you complete checkpoint 0
 
@@ -116,11 +147,9 @@ Below are the examples of above all interactions that can be done with the NFT s
 
 ![image](https://github.com/user-attachments/assets/2a320ff8-8955-4c9b-8719-65f3142137b8)
 
-
 > After that, you can easily view all of your transactions from the Block Explorer Tab
 
 ![image](https://github.com/user-attachments/assets/950a27bb-ee5a-43f4-9c13-a9e4f0b48b30)
-
 
 💼 Take a quick look at your deploy script `run-dev-node.sh` in `speedrun_stylus/packages/cargo-stylus/nft/run-dev-node.sh`.
 
@@ -130,7 +159,7 @@ Below are the examples of above all interactions that can be done with the NFT s
 
 ## Checkpoint 2: 💾 Deploy your contract! 🛰
 
-🛰  You don't need to provide any specifications to deploy your contract because contracts are automatically deployed from the `run-dev-node.sh`
+🛰 You don't need to provide any specifications to deploy your contract because contracts are automatically deployed from the `run-dev-node.sh`
 
 > You can check that below :
 
@@ -184,12 +213,13 @@ If you want to deploy your NFT contract to the Arbitrum Sepolia testnet, follow 
    ```
 
    Open your terminal and run:
+
    ```bash
    cd packages/cargo-stylus/nft
    bash run-sepolia-deploy.sh
    ```
-   This will deploy your contract to Arbitrum Sepolia and output the contract address and transaction hash.
 
+   This will deploy your NFT contract to Arbitrum Sepolia and output the contract address and transaction hash.
 
 2. **Configure the Frontend for Sepolia**
 
@@ -213,6 +243,7 @@ If you want to deploy your NFT contract to the Arbitrum Sepolia testnet, follow 
    ```bash
    yarn run dev
    ```
+
    Your frontend will now connect to the Arbitrum Sepolia network and interact with your deployed NFT contract.
 
 ---
