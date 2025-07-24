@@ -22,3 +22,7 @@ node_modules
 # cli
 dist
 .vercel
+
+packages/cargo-stylus/nft/.env
+packages/cargo-stylus/nft/target/
+packages/cargo-stylus/nft/build/

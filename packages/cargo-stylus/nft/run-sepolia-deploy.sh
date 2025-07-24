@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Load environment variables from .env file
+if [ -f .env ]; then
+  source .env
+fi
+
 # Exit on error
 set -e
 
