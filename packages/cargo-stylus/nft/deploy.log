@@ -1,0 +1,10 @@
+Checking connection to Arbitrum Sepolia...
+Connected to Arbitrum Sepolia!
+Deploying the NFT contract using cargo stylus...
+NFT contract deployed successfully!
+Transaction hash: 0x1dd1d9b8aac3055bfbd15d7404ae361c392a319bf6db860ba6b343910c8396aa
+Contract address: 0x100487b1f93c5ed3f1ada6fc10e4b248af185bf6
+Generating ABI for the deployed NFT contract...
+ABI generated and saved to stylus-contract.abi
+Deployment info saved to build/nft-deployment-info.json
+NFT contract successfully deployed on Arbitrum Sepolia!
